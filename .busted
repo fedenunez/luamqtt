@@ -6,6 +6,7 @@ return {
 =======
 >>>>>>> 0a6e421 (feat(*) rewrite loop logic)
     lpath = "./?.lua;./?/?.lua;./?/init.lua",
+    helper = "./tests/configure-log.lua",
     verbose = true,
     coverage = false,
     output = "gtest",
