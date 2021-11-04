@@ -810,14 +810,14 @@ function protocol5.parse_packet(read_func)
 	-- parse fixed header
 	byte1, err = read_func(1)
 	if not byte1 then
-		return false, "failed to read first byte: "..err
+		return false, err
 	end
 	byte1 = str_byte(byte1, 1, 1)
 	local ptype = rshift(byte1, 4)
 	local flags = band(byte1, 0xF)
 	len, err = parse_var_length(read_func)
 	if not len then
-		return false, "failed to parse remaining length: "..err
+		return false, err
 	end
 	local input = {1, available = 0} -- input data offset and available size
 	if len > 0 then
@@ -826,7 +826,7 @@ function protocol5.parse_packet(read_func)
 		data = ""
 	end
 	if not data then
-		return false, "failed to read packet data: "..err
+		return false, err
 	end
 	input.available = data:len()
 	-- read data function
