@@ -28,6 +28,7 @@ build = {
 		["mqtt.bitwrap"] = "mqtt/bitwrap.lua",
 		["mqtt.luasocket"] = "mqtt/luasocket.lua",
 		["mqtt.luasocket_ssl"] = "mqtt/luasocket_ssl.lua",
+		["mqtt.luasocket-copas"] = "mqtt/luasocket-copas.lua",
 		["mqtt.ngxsocket"] = "mqtt/ngxsocket.lua",
 		["mqtt.protocol"] = "mqtt/protocol.lua",
 		["mqtt.protocol4"] = "mqtt/protocol4.lua",
