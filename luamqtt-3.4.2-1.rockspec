@@ -1,8 +1,8 @@
 package = "luamqtt"
 version = "3.4.2-1"
 source = {
-	url = "git://github.com/fedenunez/luamqtt",
-	tag = "keepalive",
+	url = "git+https://github.com/fedenunez/luamqtt.git",
+	branch = "keepalive",
 }
 description = {
 	summary = "luamqtt - Pure-lua MQTT v3.1.1 and v5.0 client",
